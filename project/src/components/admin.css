@@ -1,0 +1,104 @@
+/* AdminDashboard.css */
+.admin-dashboard {
+    text-align: center;
+  }
+  
+  .dashboard-circle {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .count-animation {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3498db;
+    animation: countAnimation 1.5s ease-in-out;
+  }
+  
+  @keyframes countAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  span{
+    color: #3498db;
+    font-size:xx-large;
+
+  }
+  /* AdminDashboard.css */
+/* ... (previous styles) */
+
+.users-list {
+    margin-top: 30px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.users-list h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.users-list table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+.users-list th,
+.users-list td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.users-list th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.users-list tr:hover {
+    background-color: #e5e5e5;
+}
+
+.users-list button {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.users-list button:hover {
+    background-color: #2980b9;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply fadeIn animation to the UserProductsInAdmin component */
+.user-products {
+    animation: fadeIn 0.5s ease-in-out;
+}

@@ -1,0 +1,635 @@
+nav {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.navbtn {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: #333;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-right: 1rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #ccc;
+}
+
+link {
+  width: 100%;
+  height: auto;
+  color: #333;
+}
+
+
+span {
+  color: gray;
+  font-weight: bold;
+
+}
+
+
+
+/* Home.css */
+.heading {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* user-profile */
+
+.main {
+  text-align: center;
+  padding: 20px;
+}
+
+.main-heading {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-in-out;
+
+}
+
+.user-details {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.detail {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+   /* Animation */
+   animation: fadeIn 2s ease-in-out forwards;
+  
+}
+
+/* Add the new animation */
+.user-pic {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative; /* Add position relative */
+  overflow: hidden;
+}
+
+.home-img {
+  max-width: 300px;
+  max-height: 350px;
+  border-radius: 5px;
+
+  /* Initial state before animation */
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.fade-in-bottom {
+  animation: fadeInBottom 1s ease-out 1s forwards;
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.no-pic {
+  font-size: 16px;
+  color: #777;
+}
+
+.user-content {
+  margin-top: 20px;
+  text-align: center;
+  border: 3px solid rgb(83, 83, 83);
+  width: 500px;
+  box-shadow: 0 0 10px rgba(197, 75, 136, 0.849);
+  margin-left: 30%;
+
+  /* Animation */
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.edit-btn {
+  margin-top: 20px;
+}
+
+.edit-btn a {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.edit-btn a:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+/* AddProductForm.css */
+.add-product-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-heading {
+  font-size: 28px;
+  color: #333;
+}
+
+.product-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label {
+  font-size: 23px;
+  color: #555;
+  margin-bottom: 3px;
+}
+
+.form-input,
+.form-textarea,
+.form-button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.form-button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+/* user product */
+
+
+.product-card {
+  position: relative;
+  width: 300px;
+  height: 550px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  transition: transform 0.5s; /* Add the transition property */
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.product-card.active .card-content {
+  transform: rotateY(180deg);
+}
+
+.card-content {
+  height: 90%;
+  margin-left: -44px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.front-content,
+.back-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.front-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.back-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+.update-form {
+  width: 80%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.flex{
+  display: flex;
+  justify-content:space-between;
+}
+.flex>button{
+  margin-right: 20px;
+}
+
+
+
+
+
+
+/* UpdateProduct.css */
+
+.update-product {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.update-product h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  width: 80%;
+  margin-left: 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.file-input {
+  display: block;
+  width: 80%;
+  margin-left: 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.update-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.update-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* .homeimg {
+  position: fixed;
+  top: 40%;
+  left: 70%;
+  transform: translate(-50, -50);
+} */
+
+label {
+  font-weight: bold;
+}
+
+.editbtn>a {
+  background-color: #333;
+  padding: 10px;
+}
+
+.loginbtn {
+  background-color: #333;
+  color: #ccc;
+  padding: 1%;
+  margin: 2%;
+  margin-top: 3%;
+  justify-content: space-between;
+}
+
+a>.loginbtn {
+  margin-left: 10%;
+}
+
+/* .ani {
+  width: 200px;
+  height: 300px;
+  background-image: url('img1.jpg'); 
+  background-size: cover;
+  position: absolute;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+} */
+
+/* @keyframes example {
+  0%   {background-image: url('img1.jpg'); background-repeat: no-repeat;        left: 60%; top: 50%; transform: translate(-50%, -50%);}
+  25%  {background-image: url('img2.jpg'); background-repeat: no-repeat;       left: 60%; top: 70%; transform: translate(-50%, -50%);}
+  50%  {background-image: url('img3.jpg'); background-repeat: no-repeat;         left: 50%; top: 70%; transform: translate(-50%, -50%);}
+  75%  {background-image: url('img4.jpg'); background-repeat: no-repeat;        left: 50%; top: 50%; transform: translate(-50%, -50%);}
+  100% {background-image: url('img1.jpg'); background-repeat: no-repeat;          left: 60%; top: 50%; transform: translate(-50%, -50%);}
+} */
+
+.product-list {
+  text-align: center;
+  margin: 20px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  max-width: 68%;
+  height: auto;
+}
+
+.product-name,
+.product-description,
+.product-price {
+  margin: 10px 0;
+}
+
+/* about */
+/* styles.css */
+
+.animated-text {
+  font-size: 24px;
+  color: #333;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.animated-text.animate {
+  opacity: 1;
+}
+
+.vertical-rotate {
+  display: inline-block;
+  font-size: 20px;
+  color: #66cc99;
+  animation: verticalRotate 2s linear 1;
+  /* Apply the vertical rotation animation */
+  transform-origin: center bottom;
+  /* Set the rotation origin to the bottom center */
+}
+
+@keyframes verticalRotate {
+  0% {
+    transform: translateY(0) rotateX(0);
+  }
+
+  100% {
+    transform: translateY(-100%) rotateX(360deg);
+  }
+}
+
+
+
+.horizontal-rotate {
+  display: inline-block;
+  font-size: 20px;
+  color: #ff9900;
+  animation: horizontalRotate 2s linear 1;
+  /* Apply the horizontal rotation animation */
+  transform-origin: center left;
+  /* Set the rotation origin to the left center */
+}
+
+@keyframes horizontalRotate {
+  0% {
+    transform: translateX(0) rotateY(0);
+  }
+
+  100% {
+    transform: translateX(100%) rotateY(360deg);
+  }
+}
+
+/* card styling */
+
+.card {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  /* Set the depth of the 3D space */
+  transition: transform 0.5s;
+  /* Apply a transition for the rotation effect */
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  /* Enable 3D transformations */
+  transition: transform 0.5s;
+  /* Apply a transition for the flip effect */
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+  /* Flip the card on hover */
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  /* Hide the backface of the card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.card-front {
+  background-color: #f0f0f0;
+  background-color: #007bff;
+}
+
+.card-back {
+  background-color: #66cc99;
+  transform: rotateY(180deg);
+  /* Start with the back side facing front */
+}
